@@ -20,8 +20,8 @@ jobs:
           port: 22  # Default port for SFTP
           path: /yvetteagyei.com
           script: |
-            sftp -o StrictHostKeyChecking=no -P 22 $USERNAME@$HOST <<EOF
-              cd /yvetteagyei.com # Target directory
+            sftp -o StrictHostKeyChecking=no -P 22 u82142318@home590889551.1and1-data.host <<EOF
+              cd /yvetteagyei.com
               put -r ./*
               quit
-            EOF          
+            EOF      
