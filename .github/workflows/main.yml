@@ -19,8 +19,13 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }} # Your SFTP password
           port: 22 # Port for SFTP
           script: |
-            sftp -b - ${{ secrets.FTP_USERNAME }}@home590889551.1and1-data.host <<EOF
-              cd /actual/path/to/remote/directory # Replace with your actual remote directory
-              put -r ./your-local-directory/* # Replace with your actual local directory
+            sftp -o StrictHostKeyChecking=no -P $PORT $USERNAME@$HOST <<EOF
+              cd /path/to/remote/directory
+              put -r ./*
               quit
-EOF
+            EOF
+              envs:
+                HOST: "home590889551.1and1-data.host"
+                USERNAME: "${{ secrets.FTP_USERNAME }}"
+                PASSWORD: "${{ secrets.FTP_PASSWORD }}"
+                PORT: "22" # CORRECT: This is a string.
