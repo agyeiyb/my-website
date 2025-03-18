@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22 # Or your SFTP port
           script: |
-            sftp -o StrictHostKeyChecking=no -P 22 u82142318E@$home590889551.1and1-data.host <<EOF
+            sftp -o StrictHostKeyChecking=no -P 22 $USERNAME@home123456789.1and1-data.host <<EOF
               cd /yvetteagyei.com # Replace with your target directory
               put -r ./*
               quit
