@@ -22,7 +22,7 @@ jobs:
           host: home590889551.1and1-data.host
           port: 22
           user: ${{ secrets.FTP_USERNAME }}
-          pass: ${{ secrets.SFTP_PASSWORD }}
+          pass: ${{ secrets.FTP_PASSWORD }}
           localDir: './'
           remoteDir: '.'
           reverse: true
