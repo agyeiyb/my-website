@@ -16,7 +16,7 @@ jobs:
         with:
           host: home590889551.1and1-data.host  # SFTP server address
           username: ${{ secrets.FTP_USERNAME }}  # Your IONOS SFTP username
-          password: ${{ secrets.FTP_PASSWORD }}  # Your IONOS SFTP password (use SSH key if preferred)
+          password: moreMoney&abf199%!2025  # Your IONOS SFTP password (use SSH key if preferred)
           port: 22  # Default port for SFTP
           path: /yvetteagyei.com
           script: |
