@@ -18,5 +18,14 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}  # Your IONOS SFTP username
           password: ${{ secrets.FTP_PASSWORD }}  # Your IONOS SFTP password (use SSH key if preferred)
           port: 22  # Default port for SFTP
-          path: /yvetteagyei.com
-
+          script: |
+            sftp -o StrictHostKeyChecking=no -P $PORT $USERNAME@$HOST <<EOF
+              cd /yvetteagyei.com # Remote directory path (adjust as needed)
+              put -r ./*
+              quit
+EOF
+          envs:
+            HOST: home590889551.1and1-data.host
+            USERNAME: ${{ secrets.FTP_USERNAME }}
+            PASSWORD: ${{ secrets.FTP_PASSWORD }}
+            PORT: 22
