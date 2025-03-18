@@ -18,4 +18,4 @@ jobs:
           server: home590889551.1and1-data.host
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp  # Change this from ftp to sftp
+          protocol: ftps  # Change this from ftp to sftp
