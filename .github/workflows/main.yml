@@ -23,9 +23,3 @@ jobs:
               cd /yvetteagyei.com # Remote directory path (adjust as needed)
               put -r ./*
               quit
-EOF
-          envs:
-            HOST: home590889551.1and1-data.host
-            USERNAME: ${{ secrets.FTP_USERNAME }}
-            PASSWORD: ${{ secrets.FTP_PASSWORD }}
-            PORT: 22
