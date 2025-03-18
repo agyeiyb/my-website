@@ -16,11 +16,13 @@ jobs:
         run: pwd
       - name: List Directory Contents
         run: ls -la /home/runner/work/my-website/my-website #Replace with your actual path
-      - name: Deploy via SCP
-        uses: appleboy/scp-action@v0.1.7
+      - name: deploy
+        uses: pressidium/lftp-mirror-action@v1
         with:
           host: home590889551.1and1-data.host
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }} #Consider switching to ssh keys
           port: 22
-          source: home/runner/work/my-website/my-website/.
+          user: ${{ secrets.FTP_USERNAME }}
+          pass: ${{ secrets.SFTP_PASSWORD }}
+          localDir: './'
+          remoteDir: '.'
+          reverse: true
