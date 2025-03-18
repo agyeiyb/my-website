@@ -2,7 +2,7 @@ name: Deploy to IONOS via SFTP
 on:
   push:
     branches:
-      - main
+      - main # Or whatever branch you want to deploy from
 
 jobs:
   deploy:
@@ -14,13 +14,13 @@ jobs:
       - name: Deploy via SFTP
         uses: appleboy/ssh-action@v0.1.3
         with:
-          host: home590889551.1and1-data.host # Your SFTP server address
-          username: ${{ secrets.FTP_USERNAME }} # Your SFTP username
-          password: ${{ secrets.FTP_PASSWORD }} # Your SFTP password
-          port: 22 # Port for SFTP
+          host: ${{ secrets.FTP_HOST }} # Or your IONOS host directly
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 22 # Or your SFTP port
           script: |
-            sftp -o StrictHostKeyChecking=no -P $PORT $USERNAME@$HOST <<EOF
-              cd /path/to/remote/directory
+            sftp -o StrictHostKeyChecking=no -P 22 $USERNAME@$HOST <<EOF
+              cd /path/to/remote/directory # Replace with your target directory
               put -r ./*
               quit
             EOF
