@@ -1,0 +1,22 @@
+name: Deploy to IONOS via SFTP
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Deploy via SFTP
+        uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: home590889551.1and1-data.host  # SFTP server address
+          username: ${{ secrets.FTP_USERNAME }}  # Your IONOS SFTP username
+          password: ${{ secrets.FTP_PASSWORD }}  # Your IONOS SFTP password (use SSH key if preferred)
+          port: 22  # Default port for SFTP
+          source: "./"  # Path to your local files to deploy (adjust as needed)
+
