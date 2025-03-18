@@ -12,8 +12,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         
-      - name: List Source Directory Contents
-        run: ls -la agyeiyb/my-website #Replace with the actual source directory.
+      - name: Print Working Directory
+        run: pwd
      
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
