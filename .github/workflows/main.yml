@@ -18,5 +18,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}  # Your IONOS SFTP username
           password: ${{ secrets.FTP_PASSWORD }}  # Your IONOS SFTP password (use SSH key if preferred)
           port: 22  # Default port for SFTP
-          source: "./"  # Path to your local files to deploy (adjust as needed)
 
