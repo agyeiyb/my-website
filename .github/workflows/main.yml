@@ -28,4 +28,4 @@ jobs:
           HOST: "home590889551.1and1-data.host"
           USERNAME: "${{ secrets.FTP_USERNAME }}"
           PASSWORD: "${{ secrets.FTP_PASSWORD }}"
-          PORT: "22"
+          PORT: 22
