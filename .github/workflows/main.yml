@@ -11,7 +11,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+        
+      - name: List Source Directory Contents
+        run: ls -la https://github.com/agyeiyb/my-website #Replace with the actual source directory.
+     
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
