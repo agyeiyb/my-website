@@ -23,4 +23,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }} #Consider switching to ssh keys
           port: 22
-          source: /home/runner/work/my-website/my-website
+          source: home/runner/work/my-website/my-website
