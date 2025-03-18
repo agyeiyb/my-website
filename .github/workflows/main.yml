@@ -24,8 +24,8 @@ jobs:
               put -r ./*
               quit
             EOF
-          envs:
-            HOST: homechop1.1and1-data.host
-            USERNAME: ${{ secrets.FTP_USERNAME }}
-            PASSWORD: ${{ secrets.FTP_PASSWORD }}
-            PORT: 22
+        env:
+          HOST: "home590889551.1and1-data.host"
+          USERNAME: "${{ secrets.FTP_USERNAME }}"
+          PASSWORD: "${{ secrets.FTP_PASSWORD }}"
+          PORT: "22"
