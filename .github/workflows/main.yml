@@ -19,3 +19,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}  # Your IONOS SFTP password (use SSH key if preferred)
           port: 22  # Default port for SFTP
           path: /yvetteagyei.com
+          script: |
+            sftp -o StrictHostKeyChecking=no -P 22 $USERNAME@$HOST <<EOF
+              cd /yvetteagyei.com # Target directory
+              put -r ./*
+              quit
+            EOF          
