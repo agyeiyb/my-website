@@ -1,0 +1,138 @@
+.skills p {
+    padding: 0px 75px;
+}
+.title{
+    font-size: 30px;
+    font-family: 'Exo 2'
+}
+.is-skill-icon {
+ margin-top: 30px;
+ margin-bottom: 30px;
+}
+.footer-titles{
+    font-family: 'Exo 2'
+}
+#message-btn {
+ color: lightskyblue;
+
+}
+#mainNav .btn:hover {
+    color: white;
+    
+   }
+   #mainNav a:hover {
+    color: lightskyblue;
+    text-decoration: none;
+    
+   }
+.list-title{
+color: lightskyblue;
+font-weight: bolder;
+font-size: 18px;
+}
+
+.section.is-primary {
+    
+    background: #65c9f9;
+    color: #fff;
+    height: 500px;
+}
+.about {
+ text-align: center;
+}
+.section.skills {
+    margin-top: -14rem;
+    padding-bottom: 1rem;
+}
+
+.container.is-narrow {
+    max-width: 1200px;
+}
+
+.section.skills .box {
+    padding: 0;
+}
+.box {
+    border-radius: 12px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+    color: #141c3a;
+    display: block;
+    padding: 1.25rem;
+}
+.column {
+    display: block;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.75rem;
+}
+
+.section {
+    padding: 5rem 1.5rem;
+}
+#right-column{
+    border-right: 1px solid lavender;
+}
+
+.container ul {
+    list-style-type: none;
+    padding-left: 0;
+   }
+@media screen and (min-width: 769px), print{
+.columns:not(.is-desktop) {
+    display: -webkit-box;
+    display: flex;
+}
+}
+.section.skills {
+    margin-top: -14rem;
+    padding-bottom: 1rem;
+}
+
+.columns.is-centered {
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align:center;
+}
+.columns:last-child {
+    margin-bottom: -0.75rem;
+}
+
+
+
+.container.is-narrow {
+    max-width: 1200px;
+}
+@media screen and (min-width: 1408px){
+.container {
+    max-width: 1344px;
+}
+}
+@media screen and (min-width: 1216px){
+.container {
+    max-width: 1152px;
+}
+}
+@media screen and (min-width: 1024px){
+.container {
+    max-width: 960px;
+}
+}
+
+.container {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+
+#Summary h2{
+    color: white !important;
+}
+#Summary h1{
+    color: white !important;
+}
