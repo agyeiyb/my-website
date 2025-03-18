@@ -20,5 +20,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }} #Consider switching to ssh keys
           port: 22
           source: ./ # Replace with the directory containing your files
-          target: /path/to/your/web/root/ # Replace with the target directory on your IONOS server
+          target: /yvetteagyei.com # Replace with the target directory on your IONOS server
           rm: true # Optional: Remove existing files in the target directory before copying
