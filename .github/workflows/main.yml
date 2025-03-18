@@ -14,18 +14,13 @@ jobs:
       - name: Deploy via SFTP
         uses: appleboy/ssh-action@v0.1.3
         with:
-          host: home590889551.1and1-data.host  # SFTP server address
-          username: ${{ secrets.FTP_USERNAME }}  # Your IONOS SFTP username
-          password: ${{ secrets.FTP_PASSWORD }}  # Your IONOS SFTP password (use SSH key if preferred)
-          port: 22  # Default port for SFTP
+          host: home590889551.1and1-data.host  # Your SFTP server address
+          username: ${{ secrets.FTP_USERNAME }}  # Your SFTP username
+          password: ${{ secrets.FTP_PASSWORD }}  # Your SFTP password
+          port: 22  # Port for SFTP
           script: |
-            sftp -o StrictHostKeyChecking=no -P $PORT $USERNAME@$HOST <<EOF
-              cd /path/to/remote/directory # Remote directory path (adjust as needed)
-              put -r ./*
-              quit
-            EOF
-        env:
-          HOST: "home590889551.1and1-data.host"
-          USERNAME: "${{ secrets.FTP_USERNAME }}"
-          PASSWORD: "${{ secrets.FTP_PASSWORD }}"
-          PORT: 22
+            cd /path/to/remote/directory  # Remote directory path on your server
+            put -r ./your-local-directory/*  # Local files to upload
+            quit
+          action: "exec"  # Execute command on the remote host
+
